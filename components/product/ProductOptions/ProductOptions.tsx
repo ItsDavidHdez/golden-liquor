@@ -18,31 +18,10 @@ const ProductOptions: React.FC<ProductOptionsProps> = ({
     <div>
       {options.map((opt) => (
         <div className="pb-4" key={opt.displayName}>
-          <h2 className="uppercase font-medium text-sm tracking-wide">
+          {/* <h2 className="uppercase font-medium text-sm tracking-wide">
             {opt.displayName}
-          </h2>
-          <div className="flex flex-row py-4">
-            {opt.values.map((v, i: number) => {
-              const active = selectedOptions[opt.displayName.toLowerCase()]
-              return (
-                <Swatch
-                  key={`${opt.id}-${i}`}
-                  active={v.label.toLowerCase() === active}
-                  variant={opt.displayName}
-                  color={v.hexColors ? v.hexColors[0] : ''}
-                  label={v.label}
-                  onClick={() => {
-                    setSelectedOptions((selectedOptions) => {
-                      return {
-                        ...selectedOptions,
-                        [opt.displayName.toLowerCase()]: v.label.toLowerCase(),
-                      }
-                    })
-                  }}
-                />
-              )
-            })}
-          </div>
+          </h2> */}
+          <div className="flex flex-row py-4"></div>
         </div>
       ))}
     </div>
